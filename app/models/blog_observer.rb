@@ -106,12 +106,21 @@ class BlogObserver < ActiveRecord::Observer
   end 
 
   def reload_routes
+<<<<<<< HEAD
      ActionController::Routing::Routes.load!
+=======
+     PageRoute.reload_routes
+>>>>>>> rails3
   end
 
   def create_route(page, name, pattern)
     route = page.page_routes.build(:name => name, :pattern => pattern, :code => "")
+<<<<<<< HEAD
     route.send(:create_without_callbacks)
+=======
+    # route.send(:create_without_callbacks)
+    route.save!
+>>>>>>> rails3
     route.add_condition(:method, "get").save
     route.add_requirement(:year,  '\d{4,}') if pattern.include?(":year")
     route.add_requirement(:month, '\d{2,}') if pattern.include?(":month")

@@ -1,5 +1,9 @@
 require 'test_helper'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> rails3
 class BlogObserverTest < ActiveSupport::TestCase
 
   def setup

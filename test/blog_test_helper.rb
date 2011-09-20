@@ -29,14 +29,26 @@ module BlogTestHelper
     publish_all_pages
   end
 
+<<<<<<< HEAD
   def setup_blog_stubs
     Blog.any_instance.stubs(:reload_routes)
+=======
+  def setup_blog_stubs()
+    PageRoute.stubs(:reload_routes)
+>>>>>>> rails3
     @section = Section.new
     Section.stubs(:create! => @section)
     @section.stubs(:groups => [], :save! => true)
     Page.stubs(:create! => Page.new)
     Page.any_instance.stubs(:create_connector)
+<<<<<<< HEAD
   end
+=======
+    PageRoute.any_instance.stubs(:save!)
+  end
+  
+  
+>>>>>>> rails3
 
   def create_group
     @group = Factory(:group, :name => "Test", :group_type => Factory(:group_type, :name => "CMS User", :cms_access => true))

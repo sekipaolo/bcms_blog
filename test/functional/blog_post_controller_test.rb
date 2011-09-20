@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 require File.dirname(__FILE__) + '/../test_helper'
+=======
+require 'test_helper'
+>>>>>>> rails3
 
 class BlogPostControllerTest < ActionController::TestCase
   tests Cms::ContentController
