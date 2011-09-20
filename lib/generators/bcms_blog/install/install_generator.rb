@@ -10,7 +10,7 @@ class BcmsBlog::InstallGenerator < Cms::ModuleInstallation
       copy_migration_file mg
     end
 
-    def add_helpers
-      append_to_file ''
-    end
+    #def add_helpers
+    #  append_to_file ''
+    #end
 end
